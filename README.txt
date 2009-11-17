@@ -12,5 +12,5 @@ This zenpack:
 
      2) Provides screens displaying resources allocated to Guest OSs.
 
-     3) Collects nothing on its one.  It provides base functionality
+     3) Collects nothing on its own.  It provides base functionality
         for other zenpacks (XenMonitor, VMwareESXMonitor)
