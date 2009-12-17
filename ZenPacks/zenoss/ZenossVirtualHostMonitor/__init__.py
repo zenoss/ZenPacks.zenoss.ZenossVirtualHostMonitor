@@ -21,27 +21,4 @@ if os.path.isdir(skinsDir):
 from Products.ZenModel.ZenPack import ZenPackBase
 
 class ZenPack(ZenPackBase):
-    
-    def install(self, app):
-        """
-        Add transforms to mutate add/change events from the modeler to
-        migration events between esx servers.
-        """
-        ZenPackBase.install(self, app)
-
-        id = 'virtualMachineDetail'
-        try:
-            self.dmd.zenMenus.More.manage_deleteZenMenuItem((id,))
-        except (KeyError, AttributeError):
-            pass
-        self.dmd.zenMenus.More.manage_addZenMenuItem(
-            id,
-            action=id,
-            description='Guests',
-            allowed_classes=('VirtualMachineHost',),
-            ordering=5.0)
-
-
-    def upgrade(self, app):
-        ZenPackBase.upgrade(self, app)
-        self.install(app)
+    pass
