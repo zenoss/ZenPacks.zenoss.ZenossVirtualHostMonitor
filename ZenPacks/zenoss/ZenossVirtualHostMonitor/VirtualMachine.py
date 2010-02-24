@@ -59,12 +59,12 @@ class VirtualMachine(DeviceComponent, ManagedEntity):
             'icon'           : 'Device_icon.gif',
             'product'        : 'ZenossVirtualHostMonitor',
             'factory'        : 'manage_addVirtualMachine',
-            'immediate_view' : 'viewVirtualMachinePerformance',
+            'immediate_view' : 'viewVirtualMachineSnmpPerformance',
             'actions'        :
             (
                 { 'id'            : 'perf'
                 , 'name'          : 'Perf'
-                , 'action'        : 'viewVirtualMachinePerformance'
+                , 'action'        : 'viewVirtualMachineSnmpPerformance'
                 , 'permissions'   : (ZEN_VIEW, )
                 },
                 { 'id'            : 'templates'
