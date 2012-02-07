@@ -62,19 +62,9 @@ class VirtualMachine(DeviceComponent, ManagedEntity):
             'immediate_view' : 'viewVirtualMachineSnmpPerformance',
             'actions'        :
             (
-                { 'id'            : 'perf'
-                , 'name'          : 'Perf'
-                , 'action'        : 'viewVirtualMachineSnmpPerformance'
-                , 'permissions'   : (ZEN_VIEW, )
-                },
-                { 'id'            : 'templates'
-                , 'name'          : 'Templates'
-                , 'action'        : 'objTemplates'
-                , 'permissions'   : (ZEN_CHANGE_SETTINGS, )
-                },
-                )
-            },
-        )
+            )
+        },
+    )
 
     def device(self):
         return self.host()
