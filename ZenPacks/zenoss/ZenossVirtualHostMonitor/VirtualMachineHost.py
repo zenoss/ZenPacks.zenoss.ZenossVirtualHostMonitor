@@ -25,13 +25,13 @@ class VirtualMachineHost(Device):
     "A Device that hosts virtual devices."
 
     _relations = Device._relations + (
-        ('guestDevices', ToManyCont(ToOne, 
+        ('guestDevices', ToManyCont(ToOne,
             "ZenPacks.zenoss.ZenossVirtualHostMonitor.VirtualMachine", "host")),
         )
-    
+
     factory_type_information = (
         {
-            'immediate_view' : 'deviceStatus',
+            'immediate_view' : 'devicedetail',
             'actions'        :
             (
                 { 'id'            : 'status'
